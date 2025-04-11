@@ -1,23 +1,14 @@
 import React from 'react';
 import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import { useState } from 'react';
+
+import HomeScreen from './screens/HomeScreen';
 
 function App(): React.JSX.Element {
-  const[message, setMessage] = useState('Welcome');
+  
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Shiku has finally rdun the saapp</Text>
-        <Text>{message}</Text>
-      </View>
       <View>
-        
-        <Button
-          title="Click Me"
-          onPress={() => {
-            console.log('Button clicked!');
-            setMessage('Congratulations! You pressed');
-          }} />
+        <HomeScreen />
       </View>
     </SafeAreaView>
   );
@@ -28,7 +19,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
+    color: '#fff',
   },
   box: {
     
